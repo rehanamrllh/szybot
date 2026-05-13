@@ -1,69 +1,69 @@
 # Discord Music Bot
 
-Bot musik Discord berbasis `discord.js` v14 dan `discord-player` v7 dengan dukungan prefix command, queue, shuffle, repeat, dan tombol kontrol player seperti di screenshot.
+An interactive Discord music bot built with `discord.js` v14 and `discord-player` v7. It supports prefix commands, queue management, shuffle, repeat, and player controls like the ones shown in the screenshot.
 
-## Fitur
+## Features
 
-- Mainkan lagu dari judul, URL, atau query pencarian
-- Prefix command untuk `play`, `add`, `queue`, `shuffle`, `skip`, `stop`, dan `help`
-- Queue list yang menampilkan lagu aktif dan daftar antrean
-- Now Playing embed dengan tombol kontrol:
+- Play songs from a title, URL, or search query
+- Prefix commands for `play`, `add`, `queue`, `shuffle`, `skip`, `stop`, and `help`
+- Queue view that shows the current track and upcoming songs
+- Now Playing embed with control buttons:
   - previous
   - pause / resume
   - next
   - repeat
-- Status loop terlihat langsung di embed player
+- Loop status displayed directly in the player embed
 
-## Persyaratan
+## Requirements
 
-- Node.js 18+ direkomendasikan
-- Bot Discord dengan intent berikut:
+- Node.js 18+ recommended
+- A Discord bot with the following intents enabled:
   - `Guilds`
   - `GuildMessages`
   - `MessageContent`
   - `GuildVoiceStates`
-- FFmpeg tersedia lewat dependency `ffmpeg-static`
+- FFmpeg provided through the `ffmpeg-static` dependency
 
-## Instalasi
+## Installation
 
 ```bash
 npm install
 ```
 
-## Konfigurasi
+## Configuration
 
-Isi token bot lewat environment variable:
+Set the bot token through an environment variable:
 
 ```bash
 set DISCORD_TOKEN=your_bot_token
 ```
 
-Atau untuk PowerShell:
+Or for PowerShell:
 
 ```powershell
 $env:DISCORD_TOKEN="your_bot_token"
 ```
 
-Prefix bisa diubah di [config.json](config.json).
+You can change the prefix in [config.json](config.json).
 
-## Menjalankan bot
+## Running the Bot
 
 ```bash
 node index.js
 ```
 
-## Command
+## Commands
 
-### Prefix
+### Prefix Commands
 
-- `.play <query>` atau `.add <query>` — putar atau tambah lagu ke queue
-- `.queue` — tampilkan daftar queue
-- `.shuffle` — acak queue
-- `.skip` — lewati lagu aktif
-- `.stop` — hentikan player dan kosongkan queue
-- `.help` — tampilkan bantuan
+- `.play <query>` or `.add <query>` — play a song or add it to the queue
+- `.queue` — show the queue list
+- `.shuffle` — shuffle the queue
+- `.skip` — skip the current song
+- `.stop` — stop the player and clear the queue
+- `.help` — show help
 
-### Slash command
+### Slash Commands
 
 - `/play`
 - `/queue`
@@ -72,9 +72,9 @@ node index.js
 - `/stop`
 - `/help`
 
-## Kontrol Player
+## Player Controls
 
-Saat lagu diputar, bot akan mengirim embed **Now Playing** dengan tombol:
+When a song starts playing, the bot sends a **Now Playing** embed with these buttons:
 
 - ⏮️ previous
 - ⏸️ pause
@@ -82,7 +82,7 @@ Saat lagu diputar, bot akan mengirim embed **Now Playing** dengan tombol:
 - ⏭️ next
 - 🔁 repeat
 
-## Catatan
+## Notes
 
-- Jangan commit token bot ke GitHub.
-- Jika ingin menyimpan konfigurasi lokal, gunakan file lokal yang tidak di-commit atau environment variable.
+- Do not commit your bot token to GitHub.
+- If you want to keep local settings, use a local file that is not committed or an environment variable.
