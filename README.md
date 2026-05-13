@@ -82,6 +82,12 @@ When a song starts playing, the bot sends a **Now Playing** embed with these but
 - ⏭️ next
 - 🔁 repeat
 
+## Player Example
+
+Here is an example of how the player looks in Discord:
+
+![Player example](assets/player.png)
+
 ## Notes
 
 - Do not commit your bot token to GitHub.
